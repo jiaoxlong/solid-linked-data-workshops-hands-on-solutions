@@ -1,4 +1,4 @@
-Name: Convert to RDF Workflow
+name: Convert to RDF Workflow
 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
