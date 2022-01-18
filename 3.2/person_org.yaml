@@ -16,7 +16,13 @@ mappings:
       - [foaf:familyName, $(lastname)]
       - [foaf:name, $(name)]
       - [foaf:nick, $(nickname)]
-      - [ns_org:memberOf, org:$(org-id)]
+      -p: ns_org:memberOf
+       o:
+         value: $(b org)
+         mapping: orgs
+         condition:
+           function: equal
+           parametters:
 
   orgs:
     sources:

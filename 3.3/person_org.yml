@@ -1,8 +1,7 @@
 prefixes:
   foaf: http://xmlns.com/foaf/0.1/
   ppl: http://example.com/Person/
-  org: http://example.com/Organization/
-  ns_org: http://www.w3.org/ns/org#
+  org: http://www.w3.org/ns/org#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
 
 mappings:
@@ -16,12 +15,20 @@ mappings:
       - [foaf:familyName, $(lastname)]
       - [foaf:name, $(name)]
       - [foaf:nick, $(nickname)]
-      - [ns_org:memberOf, org:$(org-id)]
+      - p: org:memberOf
+        o:
+          mapping: orgs
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(org-id), s]
+              - [str2, $(id), o]
 
   orgs:
     sources:
       - [org.json~jsonpath, "$[*]"]
-    s: org:_$(id)
+    s:
     po:
       - [a, foaf:Organization]
+      - [org:identifier, $(id)]
       - [rdfs:label, $(name)]
