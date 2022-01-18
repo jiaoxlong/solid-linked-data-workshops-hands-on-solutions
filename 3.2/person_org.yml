@@ -8,7 +8,7 @@ prefixes:
 mappings:
   people:
     sources:
-      - ['people.csv~csv']
+      - ['3.1/people.csv~csv']
     s: ppl:$(id)
     po:
       - [a, foaf:Person ]
@@ -20,7 +20,7 @@ mappings:
 
   orgs:
     sources:
-      - [org.json~jsonpath, "$[*]"]
+      - [3.1/org.json~jsonpath, "$[*]"]
     s: org:_$(id)
     po:
       - [a, foaf:Organization]
