@@ -1,3 +1,0 @@
-./3.1/person.yml 3.1/people.csv
-./3.2/person_org.yml 3.2/people.csv 3.2/org.json
-./person_org.yml people.csv org.json
