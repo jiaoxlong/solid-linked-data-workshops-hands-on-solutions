@@ -6,7 +6,7 @@ prefixes:
 mappings:
   people:
     sources:
-      - ['3.1/people.csv~csv']
+      - ['people.csv~csv']
     s: ppl:$(id)
     po:
       - [a, foaf:Person ]
