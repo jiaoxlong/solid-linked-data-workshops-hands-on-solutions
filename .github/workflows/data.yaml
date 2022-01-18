@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       GLOBAL_PATTERN: "*.yml"
       SERIALIZATION_FORMAT: turtle
