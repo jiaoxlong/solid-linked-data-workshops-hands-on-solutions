@@ -1,0 +1,38 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns_org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.com/Organization/_avngrs> a foaf:Organization;
+  rdfs:label "Avengers" .
+
+<http://example.com/Organization/_new-u> a foaf:Organization;
+  rdfs:label "New U Technologies" .
+
+<http://example.com/Person/0> a foaf:Person;
+  ns_org:memberOf "http://example.com/Organization/new-u";
+  foaf:familyName "Stacy";
+  foaf:givenName "Gwendolyne";
+  foaf:name "";
+  foaf:nick "Gwen" .
+
+<http://example.com/Person/1> a foaf:Person;
+  ns_org:memberOf "http://example.com/Organization/avngrs";
+  foaf:familyName "";
+  foaf:givenName "";
+  foaf:name "T'Challa";
+  foaf:nick "Black Panther" .
+
+<http://example.com/Person/2> a foaf:Person;
+  ns_org:memberOf "http://example.com/Organization/avngrs";
+  foaf:familyName "Maximoff";
+  foaf:givenName "Wanda";
+  foaf:name "";
+  foaf:nick "Scarlet Witch" .
+
+<http://example.com/Person/3> a foaf:Person;
+  ns_org:memberOf "http://example.com/Organization/new-u";
+  foaf:familyName "Clarkson";
+  foaf:givenName "Rita";
+  foaf:name "";
+  foaf:nick "" .
