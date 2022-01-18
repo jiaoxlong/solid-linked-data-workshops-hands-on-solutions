@@ -1,1 +1,1 @@
-./person_org.yml people.csv org.json
+./person_org.yml person.csv org.json
