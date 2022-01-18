@@ -1,0 +1,27 @@
+prefixes:
+  foaf: http://xmlns.com/foaf/0.1/
+  ppl: http://example.com/Person/
+  org: http://example.com/Organization/
+  ns_org: http://www.w3.org/ns/org#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+  people:
+    sources:
+      - ['person.csv~csv']
+    s: ppl:$(id)
+    po:
+      - [a, foaf:Person ]
+      - [foaf:givenName, $(firstname)]
+      - [foaf:familyName, $(lastname)]
+      - [foaf:name, $(name)]
+      - [foaf:nick, $(nickname)]
+      - [ns_org:memberOf, org:$(org-id)]
+
+  orgs:
+    sources:
+      - [org.json~jsonpath, "$[*]"]
+    s: org:_$(id)
+    po:
+      - [a, foaf:Organization]
+      - [rdfs:label, $(name)]

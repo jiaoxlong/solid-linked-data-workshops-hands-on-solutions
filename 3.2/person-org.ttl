@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix org: <http://example.com/Organization/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix ppl: <http://example.com/Person/>.
+@prefix ns_org: <http://www.w3.org/ns/org#>.
+
+<http://example.com/Person/0> a foaf:Person;
+    foaf:givenName "Gwendolyne";
+    foaf:familyName "Stacy";
+    foaf:nick "Gwen";
+    ns_org:memberOf "http://example.com/Organization/new-u".
+<http://example.com/Person/1> a foaf:Person;
+    foaf:name "T'Challa";
+    foaf:nick "Black Panther";
+    ns_org:memberOf "http://example.com/Organization/avngrs".
+<http://example.com/Person/2> a foaf:Person;
+    foaf:givenName "Wanda";
+    foaf:familyName "Maximoff";
+    foaf:nick "Scarlet Witch";
+    ns_org:memberOf "http://example.com/Organization/avngrs".
+<http://example.com/Person/3> a foaf:Person;
+    foaf:givenName "Rita";
+    foaf:familyName "Clarkson";
+    ns_org:memberOf "http://example.com/Organization/new-u".
+<http://example.com/Organization/_new-u> a foaf:Organization;
+    rdfs:label "New U Technologies".
+<http://example.com/Organization/_avngrs> a foaf:Organization;
+    rdfs:label "Avengers".
